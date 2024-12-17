@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+
+// eslint-disable-next-line react/prop-types
 const List = ({ people }) => {
   return (
     <>
@@ -6,16 +9,17 @@ const List = ({ people }) => {
         return (
           <div
             className="flex flex-col justify-center items-center border border-spacing-1 py-5"
-            key={person.id}
+            key={id} //+
           >
             <img
               className="rounded-full w-24 h-24 "
               width="120px"
-              src={person.img}
-              alt={person.name}
+              src={img} //+
+              alt={name} //+
             />
-            <h3>{person.name}</h3>
-            <p>{person.age} years old</p>
+
+            <h3>{name}</h3>
+            <p>{age} years old</p>
           </div>
         );
       })}
